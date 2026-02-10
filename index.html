@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Idade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #fff;
+            margin-bottom: 40px;
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        button {
+            padding: 16px 48px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 12px;
+            font-weight: 600;
+            min-width: 140px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.5px;
+        }
+        button span {
+            position: relative;
+            z-index: 1;
+        }
+        button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+        button:active {
+            transform: translateY(0) scale(0.98);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        .sim {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            color: #fff;
+        }
+        .sim:hover {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+        }
+        .nao {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: #fff;
+        }
+        .nao:hover {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+                margin-bottom: 35px;
+            }
+            .buttons {
+                flex-direction: column;
+                gap: 16px;
+                width: 100%;
+            }
+            button {
+                width: 100%;
+                max-width: 300px;
+                padding: 18px 32px;
+                font-size: 17px;
+                min-width: auto;
+            }
+            button:hover {
+                transform: translateY(-1px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Você tem mais de 18 anos?</h1>
+        <div class="buttons">
+            <!-- Insira seu link aqui para o botão SIM -->
+            <button class="sim" onclick="window.location.href='https://sharkbot.com.br/l/organicomodelo?utm_source=tiktok&utm_campaign=bio&utm_medium=organic&utm_content=profile'"><span>SIM</span></button>
+            <!-- Insira seu link aqui para o botão NÃO -->
+            <button class="nao" onclick="window.location.href='https://sharkbot.com.br/l/organicomodelo?utm_source=tiktok&utm_campaign=bio&utm_medium=organic&utm_content=profile'"><span>NÃO</span></button>
+        </div>
+    </div>
+</body>
+</html>
+
